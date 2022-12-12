@@ -1,3 +1,9 @@
+/* dec 11 2022 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(214, 225, 254);
+  
+  justify-content: center;
+  
+  width: 100%;
+  height: 100vh;
+}
+header,body ,.inputDiv,.data,
+ul li {
+display: flex;
+  align-items: center;
+}
+.todo-box{
+  width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+header{
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  
+  justify-content: space-between;
+}
+.inputDiv{
+  margin: 10px 0;
+  justify-content: center;
+  padding: 5px;
+}
+input{
+  font-size: 1.1rem;
+  outline: none;
+  background-color: rgb(189, 232, 199);
+  border: 1px solid rgb(113, 182, 129);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.inputDiv i{
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 12px;
+  background-color: rgb(189, 232, 199);
+}
+.inputDiv i:hover{
+  background-color: rgb(113, 182, 129);
+}
+.data{
+  justify-content: center;
+  flex-direction: column;
+}
+ul li{
+  list-style: none;
+  margin: 10px 0;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 299px;
+  overflow-x: hidden;
+}
+ul li i{
+  color: rgba(128, 128, 128, 0.802);
+  border-radius: 50%;
+  padding: 7px 10px;
+}
+ul li i:hover{
+  background-color: #e3cfcf;
+  cursor: pointer;
+  color: #f0e0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* responsive */
+@media (max-width:550px) {
+  .todo-box{
+    width: 350px;
+  }
+}
+@media (max-width:450px) {
+  .todo-box{
+    width: 310px;
+  }
+  input{
+    font-size: 1rem;
+    padding: 7px 11px;
+  }
+  ul{
+    width: 290px;
+  }
+}
+@media (max-width:400px){
+  .todo-box {
+      width: 280px;
+    }
+        ul {
+          width: 260px;
+        }
+    ul li{
+          justify-content: space-around;
+          }
 }
